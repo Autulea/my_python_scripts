@@ -5,11 +5,11 @@ from multiprocessing import cpu_count
 from PIL import Image
 
 global input_dir, output_dir, worklist, id, resolution
-input_dir = './genshin'
-output_dir = input_dir + '_webp/'
-worklist = []
-id = 0
-resolution = 512
+input_dir = './genshin'                 # the dir within all your pictures to be converted
+output_dir = input_dir + '_webp/'       # the new output dir
+worklist = []                           # address list for multi-processing
+id = 0                                  # process counter
+resolution = 512                        # output resolution
 
 def image_process(file):
     global id, output_dir, resolution
